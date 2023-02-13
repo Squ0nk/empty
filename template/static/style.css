@@ -1,0 +1,46 @@
+.body {
+  background-color: #E8E8E8;
+
+}
+#log{box-shadow: 2px 4px 3px 3px  black;
+resize: none;
+background-color: black;
+color: green;
+}
+.form-control{resize: none;}
+a{text-decoration: none;}
+.foooter{position: relative;
+margin: auto;}
+.cop{color: #E8E8E8;
+text-align: center;
+font-size: 20px;}
+
+/* registation */
+.container1{
+position: relative;
+clear:both; text-align:right;
+margin-top: 20px;
+position: relative;
+right: 90px}
+
+
+/* auth */
+.container2{
+  position: relative;
+  clear:both; text-align:right;
+  margin-top: 20px;
+  position: relative;
+  right: 90px;}
+
+.link{
+position: relative; 
+right: 47px;}
+
+.log{margin-bottom: 5px;}
+.pas{margin-top: 20px;}
+.logg{margin-bottom: 5px;}
+
+#but{width: 188px;}
+#btn{width: 188px;}
+#main{margin-top: 5px;}
+#Login{width: 174px;}
