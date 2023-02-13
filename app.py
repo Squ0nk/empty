@@ -18,7 +18,7 @@ app.register_blueprint(logout)
 app.config.from_object(__name__)
 app.secret_key = '_5#y2L"F4Q8z\n\xec]/'
 
-#comment
+#comment gitclone
 @app.route('/')
 def main():
     return render_template('main.html')
