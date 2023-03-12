@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>LFI|Advanced Vulnerability Scanner</title>
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="script.js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</head>
+<body class="body">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LFI|Automated Vulnerability Scanner</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Тип атаки
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="http://localhost/sqli">SQLi</a></li>
+              <li><a class="dropdown-item" href="http://localhost/xss">XSS</a></li>
+              <li><a class="dropdown-item" href="#">LFI</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>                    <a style="text-decoration: none; color:white" href="http://localhost/logout">Выйти</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col"><p class="">Лог программы</p>
+        <textarea name="log" id="log" cols="65" rows="20px" readonly ></textarea>
+      </div>
+      <div class="col">
+        <form action="responder.py" method="post">
+          <div class="input-group input-mb-2"> 
+            <input type="text" class="form-control" placeholder="Введите URL" aria-label="" aria-describedby="basic-addon1">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Загрузить список URL</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-dark">Загрузить</button>
+          </div>
+          
+          <div class="form-floating">
+            <p class="fs-6">Введите полезную нагрузку</p>
+            <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Загрузить полезные нагрузки</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-dark">Загрузить</button>
+          </div>
+          <div class="mb-5 row">
+            <label for="inputPassword">Количество потоков</label>
+            <div class="col-sm-120">
+              <input type="text" class="form-control" id="inputPassword">
+            </div>
+      
+          </div>
+          <div class="form-floating"><br>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-dark" id="one" >Проверить</button>
+            </div>
+            <div class="form-floating">
+              <div class="form-floating"><br>
+                <div class="d-grid gap-2">
+                  <button type="button" class="btn btn-dark">Сохранить результаты</button>
+                </div>
+                <div class="form-floating">
+                  <div class="d-grid gap-2"> <br>
+
+                </div>
+              </div>
+            </div>
+          </div>          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom  bg-dark">
+  <div class="col text-aligh-center">
+    <p class="cop">
+      © 2023 Copyright Alex Ushakov
+    </p>
+  </div>
+
+</nav>
+</body>
+</html>
